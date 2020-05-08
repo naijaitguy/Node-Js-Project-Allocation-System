@@ -1,0 +1,83 @@
+<%- include ("header")  %>
+<%- include ("Navbar")  %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+			<%- include ("sidebar")  %>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Manage Profile</h1>
+               
+        <form action="/Profile" method="post" class="col-md-4 well">
+        	
+    <div class=" alert-danger">
+
+		
+	</div>
+	 
+	 <div class=" alert-success">
+	
+	 	
+	 </div>
+        	 
+        	<!-------------------->
+        	<div class="form-group">
+        		<label> Email: </label>
+<input type="email" name="Email" class="form-control" value="<%= mgs.Email %>" disabled>
+        		
+        	</div>
+        	<!-------------------->
+        	
+        	<!-------------------->
+        	<div class="form-group">
+        		<label> Old Password: </label>
+        		
+        		<input type="password" name="OldPassword" class="form-control">
+        		
+        	</div>
+        	<!-------------------->
+        	
+        		<!-------------------->
+				<div class="form-group">
+					<label> New Password: </label>
+					
+					<input type="password" name="Password" class="form-control">
+					
+				</div>
+				<!-------------------->
+				
+        	<!-------------------->
+        	<div class="form-group">
+        		<label> Confirm Password: </label>
+        		
+        		<input type="password" name="Confirm_Password" class="form-control">
+        		
+        	</div>
+        	<!-------------------->
+        
+        	<!-------------------->
+        	<div class="form-group">
+        		<label> Full Name: </label>
+        		
+        		<input type="text" name="Name" class="form-control" value=" <%= mgs.Name %>">
+        		
+        	</div>
+        	<!-------------------->
+        	
+        	<!-------------------->
+        	<div class="form-group">
+        		<input type="submit" class="btn btn-success" name="Submit_User" value="Save Changes">
+        	</div>
+        	<!-------------------->
+        	
+        	
+        	<?php }?>
+        </form>
+         
+      </div>
+    </div>
+
+
+<div class="row">
+	<%- include ("footer")  %>
+</div>

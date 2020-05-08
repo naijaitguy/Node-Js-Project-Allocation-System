@@ -1,0 +1,71 @@
+<%- include ("header")  %>
+<%- include ("Navbar")  %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <%- include ("sidebar")  %>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header text-primary">STUDENTS DETIALS</h1>
+          
+        
+           <div class="row"> 
+          
+         
+          
+          <div class="col-md-12"> 
+       
+
+          <div class="table-responsive">
+          <table id="example" class="table table-bordered table-striped table-hover table-bordered" style="width:100%">
+           <thead> 
+            <tr class="text-primary" style="text-align: center;">
+             	<th>STUDENT NAME </th>
+             	<th>MATRIC NUMBER </th>
+             	<th> PROGRAM </th>
+             	
+             	<th>EMAIL </th>
+             	
+             	
+             		<th> Action </th>
+            
+               </tr>
+             </thead>
+              	<tbody> 
+                  <% Data.forEach( item => {   %>
+					 
+				<tr>   
+				 <td> <%= item.Name %> </td>
+              	  <td> <%= item.Matric_Number %> </td>
+             	    <td> <%= item.Program %> </td>
+              	    <td> <%= item.Email %></td>
+              	     
+              	     
+<td> 
+  
+  <a href="/Edit_Student/<%= item.ID %>"> <button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o"></i> 
+</button> </a>
+
+<a href="/Delete_Student/<%= item.ID %>"> <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </a> </td>
+              	      
+               	 </tr>	
+              
+                  <%
+                } ) %>
+                   
+           </tbody>
+            </table>
+          </div>
+          
+     
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+
+<div class="row">
+  <%- include ("footer")  %>
+</div>
