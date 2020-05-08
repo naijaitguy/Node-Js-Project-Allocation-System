@@ -72,12 +72,6 @@ App.post('/AddUser', userroute.Process_AddUser);
 
 
 
-
-
-
-
-
-
 App.get('*', userroute.PageNotFound)
 
 //////////////////custome 4040--------------
