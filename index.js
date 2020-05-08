@@ -21,7 +21,7 @@ App.use(partials());
 
 const userroute = require('./Controller/UserController');
 
-///////////////////////////
+//////////////////////////////
 App.get('/', userroute.LoginUser);
 App.get('/LogOut', userroute.Logout)
 App.get('/Login', userroute.LoginUser);
