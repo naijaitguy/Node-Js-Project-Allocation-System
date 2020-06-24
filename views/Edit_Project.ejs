@@ -20,19 +20,21 @@
 	 </div>
          
     
-     <form action="/Edit_Project" method="post" role="form"> 
+     <form action="/Project/Edit_Project" method="post" role="form"> 
           <div class="form-group">
           	<label> Project Topic :</label>
           	
-     <input type="text" name="topic" class="form-control" value="<%= Data[0].Project_Topic %>">
+     <input type="text" name="topic" required class="form-control" value="<%= Data[0].Project_Topic %>">
+
+  
           	
           </div>
-           
+          <input type="hidden"  required name="id" class="form-control" value="<%= Data[0].ID %>">
            
             <div class="form-group">
           	<label> Area Of Knowledge :</label>
           	
- <input type="text" name="area" class="form-control"  value="<%= Data[0].  Area_Of_Knowledge %> " >
+ <input type="text" name="area" class="form-control" required  value="<%= Data[0].  Area_Of_Knowledge %> " >
           	
           </div>
           
@@ -40,14 +42,14 @@
             <div class="form-group">
           	<label> Assign Supervisor :</label>
           	
- <input type="text" name="supervisor" class="form-control" value="<%= Data[0].supervisor %>" >
+ <input type="text" name="supervisor" required class="form-control" value="<%= Data[0].supervisor %>" >
           	
           </div>
           
  <div class="form-group">
           	<label> Program :</label>
           	
-   <select class="form-control" name="program">  <%= Data[0].Program %> 
+   <select class="form-control" required name="program">  <%= Data[0].Program %> 
     <option value="<%= Data[0].Program %>"> </option> 
       <option value="BSC"> B.Sc </option>
          <option value="MSC"> M.Sc </option>

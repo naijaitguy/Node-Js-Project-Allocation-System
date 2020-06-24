@@ -9,10 +9,19 @@
           <h1 class="page-header text-primary">Add New Project Details</h1>
                   <div class="col-md-5 well col-md-offset-3">  
           
-     <div class=" alert-danger">
+          
+    <% if (err.length > 0) { %>
+      <div class="alert alert-danger  " >        <%=err%> 	</div>
+  
+     
+      <% } %>
 
-		
-	</div>
+
+      <% if (suc.length > 0) { %>
+        <div class="alert alert-success  " >        <%=suc%> 	</div>
+    
+       
+        <% } %>
 	 
 	 <div class=" alert-success">
 
@@ -22,7 +31,7 @@
           <div class="form-group">
           	<label> Project Topic :</label>
           	
-          	<input type="text" name="topic" class="form-control">
+          	<input type="text" name="topic" required class="form-control">
           	
           </div>
            
@@ -30,7 +39,7 @@
             <div class="form-group">
           	<label> Area Of Knowledge :</label>
           	
-          	<input type="text" name="area" class="form-control">
+          	<input type="text" required name="area" class="form-control">
           	
           </div>
           
@@ -38,7 +47,7 @@
             <div class="form-group">
           	<label> Assign Supervisor :</label>
           	
-          	<input type="text" name="supervisor" class="form-control">
+          	<input type="text" required name="supervisor" class="form-control">
           	
           </div>
           
@@ -46,7 +55,7 @@
             <div class="form-group">
           	<label> Program :</label>
           	
-         <select class="form-control" name="program">
+         <select class="form-control" required name="program">
           <option value="BSC"> B.Sc </option>
           	<option value="MSC"> M.Sc </option>
           		<option value="PGD"> P.gd </option>
